@@ -33,7 +33,7 @@ A modern React-based Airbnb clone showcasing properties across Uganda, built wit
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/airbnb-uganda.git
+git clone https://github.com/nyamzi/airbnb-uganda.git
 cd airbnb-uganda
 ```
 
@@ -180,6 +180,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+Wanyama David - davidwanyama17@gmail.com
 
-Project Link: [https://github.com/yourusername/airbnb-uganda](https://github.com/yourusername/airbnb-uganda) 
+Project Link: [https://github.com/nyamzi/airbnb-uganda](https://github.com/nyamzi/airbnb-uganda) 
