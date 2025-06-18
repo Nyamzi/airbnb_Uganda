@@ -3,14 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { sampleProperties } from '../data/sampleProperties';
+import Map from './Map';
 import './Listings.css';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api';
-
-const MAPS_API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY'; // Replace with your real key
-const MAP_CONTAINER_STYLE = { width: '100%', height: '400px' };
-const MAP_CENTER = { lat: 1.3733, lng: 32.2903 }; // Center of Uganda
 
 const Listings = () => {
   const navigate = useNavigate();
@@ -18,6 +14,7 @@ const Listings = () => {
   const [filteredProperties, setFilteredProperties] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'map'
   const [filters, setFilters] = useState({
     location: '',
     priceRange: '',
@@ -94,6 +91,10 @@ const Listings = () => {
     navigate(`/property/${propertyId}`);
   };
 
+  const handleMapPropertyClick = (property) => {
+    navigate(`/property/${property.id}`);
+  };
+
   const formatPrice = (price) => {
     return new Intl.NumberFormat('en-UG', {
       style: 'currency',
@@ -142,38 +143,63 @@ const Listings = () => {
           <option value="house">House</option>
           <option value="villa">Villa</option>
         </select>
+        
+        {/* View Mode Toggle */}
+        <div className="view-toggle">
+          <button
+            className={`toggle-btn ${viewMode === 'grid' ? 'active' : ''}`}
+            onClick={() => setViewMode('grid')}
+          >
+            <i className="fas fa-th"></i> Grid
+          </button>
+          <button
+            className={`toggle-btn ${viewMode === 'map' ? 'active' : ''}`}
+            onClick={() => setViewMode('map')}
+          >
+            <i className="fas fa-map"></i> Map
+          </button>
+        </div>
       </div>
 
-      <div className="properties-grid">
-        {filteredProperties.map((property) => (
-          <div 
-            key={property.id} 
-            className="property-card"
-            onClick={() => handlePropertyClick(property.id)}
-          >
-            <div className="property-image">
-              <img 
-                src={property.images?.[0] || 'https://via.placeholder.com/300x200'} 
-                alt={property.title}
-                loading="lazy"
-              />
-            </div>
-            <div className="property-info">
-              <h3>{property.title}</h3>
-              <p className="location">
-                <i className="fas fa-map-marker-alt"></i>
-                {property.location}
-              </p>
-              <div className="property-details">
-                <span><i className="fas fa-bed"></i> {property.bedrooms} beds</span>
-                <span><i className="fas fa-bath"></i> {property.bathrooms} baths</span>
-                <span><i className="fas fa-users"></i> {property.maxGuests} guests</span>
+      {viewMode === 'map' ? (
+        <div className="map-view">
+          <Map 
+            properties={filteredProperties}
+            onPropertyClick={handleMapPropertyClick}
+          />
+        </div>
+      ) : (
+        <div className="properties-grid">
+          {filteredProperties.map((property) => (
+            <div 
+              key={property.id} 
+              className="property-card"
+              onClick={() => handlePropertyClick(property.id)}
+            >
+              <div className="property-image">
+                <img 
+                  src={property.images?.[0] || 'https://via.placeholder.com/300x200'} 
+                  alt={property.title}
+                  loading="lazy"
+                />
               </div>
-              <p className="price">{formatPrice(property.price)} <span>per night</span></p>
+              <div className="property-info">
+                <h3>{property.title}</h3>
+                <p className="location">
+                  <i className="fas fa-map-marker-alt"></i>
+                  {property.location}
+                </p>
+                <div className="property-details">
+                  <span><i className="fas fa-bed"></i> {property.bedrooms} beds</span>
+                  <span><i className="fas fa-bath"></i> {property.bathrooms} baths</span>
+                  <span><i className="fas fa-users"></i> {property.maxGuests} guests</span>
+                </div>
+                <p className="price">{formatPrice(property.price)} <span>per night</span></p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

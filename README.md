@@ -8,16 +8,44 @@ A modern React-based Airbnb clone showcasing properties across Uganda, built wit
 - 🏠 Property Listings with detailed views
 - 🔍 Advanced filtering and search functionality
 - 📱 Responsive design for all devices
-- 🗺️ Property location information
+- 🗺️ **Interactive Map Integration** with Google Maps
+- ⭐ **Reviews & Ratings System** with detailed feedback
+- 📅 **Booking Calendar** with date selection and availability
 - 👥 Host profiles and contact information
 - 💰 Price display in Ugandan Shillings (UGX)
 - 🖼️ Image galleries for properties
 - 📞 Direct contact options (WhatsApp, SMS, Call, Email)
 
+## New Features (Latest Update)
+
+### 🗺️ Map Integration
+- Interactive Google Maps showing all properties
+- Property markers with info windows
+- Toggle between grid and map view
+- Real-time property location display
+- Click markers to view property details
+
+### ⭐ Reviews & Ratings System
+- Comprehensive rating system (Cleanliness, Communication, Check-in, Accuracy, Location, Value)
+- User reviews with photos and detailed feedback
+- Average rating calculations
+- Review submission for authenticated users
+- Detailed rating breakdowns
+
+### 📅 Booking Calendar
+- Interactive date picker with availability checking
+- Guest count selection
+- Real-time price calculation
+- Booking conflict prevention
+- Service fee calculations
+- Booking confirmation system
+
 ## Technologies Used
 
 - **Frontend**: React.js, React Router
 - **Backend**: Firebase (Firestore, Authentication)
+- **Maps**: Google Maps API (@react-google-maps/api)
+- **Date Picker**: React DatePicker
 - **Styling**: CSS3 with responsive design
 - **Deployment**: Ready for deployment on various platforms
 
@@ -28,6 +56,7 @@ A modern React-based Airbnb clone showcasing properties across Uganda, built wit
 - Node.js (v14 or higher)
 - npm or yarn
 - Firebase account
+- Google Maps API key (for map functionality)
 
 ### Installation
 
@@ -48,7 +77,14 @@ npm install
    - Create a Firestore database
    - Update the Firebase configuration in `src/firebase.js`
 
-4. Start the development server:
+4. Set up Google Maps API:
+   - Get a Google Maps API key from [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a `.env` file in the root directory:
+   ```
+   REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+   ```
+
+5. Start the development server:
 ```bash
 npm start
 ```
@@ -73,7 +109,13 @@ airbnb/
 │   │   ├── Navbar.jsx
 │   │   ├── Navbar.css
 │   │   ├── ContactHostModal.jsx
-│   │   └── ContactHostModal.css
+│   │   ├── ContactHostModal.css
+│   │   ├── Map.jsx
+│   │   ├── Map.css
+│   │   ├── Reviews.jsx
+│   │   ├── Reviews.css
+│   │   ├── BookingCalendar.jsx
+│   │   └── BookingCalendar.css
 │   ├── contexts/
 │   │   └── AuthContext.jsx
 │   ├── data/
@@ -84,6 +126,7 @@ airbnb/
 │   ├── firebase.js
 │   └── index.js
 ├── package.json
+├── .env
 └── README.md
 ```
 
@@ -99,14 +142,36 @@ airbnb/
 - Browse properties across Uganda
 - Filter by location, price range, and property type
 - Search functionality
-- Responsive grid layout
+- **Toggle between grid and map view**
+- **Interactive map with property markers**
 
 ### Property Details
 - Comprehensive property information
 - Image galleries with navigation
 - Host profiles and contact details
 - Location information and nearby attractions
-- Booking/contact functionality
+- **Interactive booking calendar**
+- **Reviews and ratings system**
+
+### Map Integration
+- **Google Maps integration with property markers**
+- **Info windows with property previews**
+- **Real-time location display**
+- **Map view toggle in listings**
+
+### Reviews & Ratings
+- **6-category rating system**
+- **User review submissions**
+- **Average rating calculations**
+- **Detailed rating breakdowns**
+- **Review moderation system**
+
+### Booking System
+- **Interactive date picker**
+- **Availability checking**
+- **Guest count selection**
+- **Real-time pricing**
+- **Booking confirmation**
 
 ### Contact System
 - Multiple contact methods (WhatsApp, SMS, Call, Email)
@@ -129,6 +194,17 @@ const firebaseConfig = {
   messagingSenderId: "your-sender-id",
   appId: "your-app-id"
 };
+```
+
+## Google Maps Setup
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select existing one
+3. Enable Maps JavaScript API
+4. Create credentials (API key)
+5. Add the API key to your `.env` file:
+```
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 ```
 
 ## Deployment
@@ -176,6 +252,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by Airbnb's design and functionality
 - Built with modern React practices
 - Firebase for backend services
+- Google Maps for location services
 - Community contributors and feedback
 
 ## Contact

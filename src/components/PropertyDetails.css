@@ -4,6 +4,22 @@
   padding: 20px;
 }
 
+/* Property Layout */
+.property-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.property-main {
+  min-width: 0; /* Prevents grid overflow */
+}
+
+.property-sidebar {
+  min-width: 0; /* Prevents grid overflow */
+}
+
 .back-button {
   background: none;
   border: none;
@@ -434,6 +450,15 @@
     padding: 15px;
   }
 
+  .property-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .property-sidebar {
+    order: -1; /* Move booking calendar to top on mobile */
+  }
+
   .main-image-container {
     height: 300px;
   }
@@ -476,6 +501,10 @@
 }
 
 @media (max-width: 480px) {
+  .property-layout {
+    gap: 15px;
+  }
+
   .main-image-container {
     height: 200px;
   }

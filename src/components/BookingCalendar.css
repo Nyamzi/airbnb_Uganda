@@ -1,0 +1,275 @@
+.booking-calendar {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.booking-header h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.booking-header span {
+  color: #666;
+  font-size: 14px;
+}
+
+.date-picker-container {
+  margin-bottom: 24px;
+}
+
+.date-picker-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.date-picker {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* Custom DatePicker styles */
+.react-datepicker {
+  font-family: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.react-datepicker__header {
+  background-color: #ff385c;
+  color: white;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+.react-datepicker__current-month {
+  color: white;
+  font-weight: 600;
+}
+
+.react-datepicker__day-name {
+  color: white;
+}
+
+.react-datepicker__day {
+  border-radius: 4px;
+  margin: 2px;
+  transition: all 0.2s;
+}
+
+.react-datepicker__day:hover {
+  background-color: #ff385c;
+  color: white;
+}
+
+.react-datepicker__day--selected {
+  background-color: #ff385c;
+  color: white;
+}
+
+.react-datepicker__day--in-range {
+  background-color: #ffe8ec;
+  color: #333;
+}
+
+.react-datepicker__day--in-selecting-range {
+  background-color: #ffe8ec;
+  color: #333;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: #ff385c;
+  color: white;
+}
+
+.react-datepicker__day--disabled {
+  color: #ccc;
+  background-color: #f8f9fa;
+}
+
+.guests-selector {
+  margin-bottom: 24px;
+}
+
+.guests-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.guests-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.guests-control button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.guests-control button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #ff385c;
+}
+
+.guests-control button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.guests-control span {
+  font-weight: 500;
+  color: #333;
+}
+
+.guests-selector small {
+  color: #666;
+  font-size: 12px;
+}
+
+.price-breakdown {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.price-row:last-child {
+  margin-bottom: 0;
+}
+
+.price-row.total {
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.booking-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.book-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #ff385c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 16px;
+}
+
+.book-button:hover:not(:disabled) {
+  background-color: #e31c5f;
+}
+
+.book-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.booking-info {
+  text-align: center;
+}
+
+.booking-info p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.info-item span:first-child {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-calendar {
+    position: static;
+    margin-top: 20px;
+  }
+  
+  .guests-control {
+    padding: 8px;
+  }
+  
+  .guests-control button {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  
+  .price-breakdown {
+    padding: 12px;
+  }
+  
+  .price-row {
+    font-size: 13px;
+  }
+  
+  .price-row.total {
+    font-size: 15px;
+  }
+} 

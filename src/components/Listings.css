@@ -63,6 +63,7 @@
   gap: 15px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .filters input,
@@ -235,6 +236,50 @@
   font-size: 14px;
   line-height: 1.5;
   margin-top: 10px;
+}
+
+/* View Toggle Styles */
+.view-toggle {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.toggle-btn {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toggle-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #ff385c;
+}
+
+.toggle-btn.active {
+  background-color: #ff385c;
+  color: white;
+  border-color: #ff385c;
+}
+
+.toggle-btn i {
+  font-size: 16px;
+}
+
+/* Map View Styles */
+.map-view {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */

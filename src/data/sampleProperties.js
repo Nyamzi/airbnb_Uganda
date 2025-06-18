@@ -11,6 +11,7 @@ export const sampleProperties = [
     maxGuests: 6,
     size: '180 sqm',
     type: 'apartment',
+    coordinates: { lat: 0.3476, lng: 32.5825 },
     amenities: ['Pool', 'WiFi', 'Kitchen', 'Parking', 'Air Conditioning', 'Gym'],
     images: [
       'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -28,6 +29,7 @@ export const sampleProperties = [
     maxGuests: 8,
     size: '300 sqm',
     type: 'villa',
+    coordinates: { lat: 0.3136, lng: 32.5811 },
     amenities: ['Pool', 'WiFi', 'Kitchen', 'Parking', 'Air Conditioning', 'Garden'],
     images: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -45,6 +47,7 @@ export const sampleProperties = [
     maxGuests: 4,
     size: '100 sqm',
     type: 'apartment',
+    coordinates: { lat: 0.2956, lng: 32.6297 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Security'],
     images: [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -64,6 +67,7 @@ export const sampleProperties = [
     maxGuests: 10,
     size: '400 sqm',
     type: 'villa',
+    coordinates: { lat: 0.0528, lng: 32.4633 },
     amenities: ['Pool', 'WiFi', 'Kitchen', 'Parking', 'Air Conditioning', 'Lake View'],
     images: [
       'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -81,6 +85,7 @@ export const sampleProperties = [
     maxGuests: 4,
     size: '120 sqm',
     type: 'apartment',
+    coordinates: { lat: 0.0528, lng: 32.4633 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Beach Access'],
     images: [
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -100,6 +105,7 @@ export const sampleProperties = [
     maxGuests: 6,
     size: '200 sqm',
     type: 'house',
+    coordinates: { lat: 0.4244, lng: 33.2041 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Garden', 'River View'],
     images: [
       'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -117,6 +123,7 @@ export const sampleProperties = [
     maxGuests: 4,
     size: '100 sqm',
     type: 'house',
+    coordinates: { lat: 0.4244, lng: 33.2041 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Garden'],
     images: [
       'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -136,6 +143,7 @@ export const sampleProperties = [
     maxGuests: 8,
     size: '300 sqm',
     type: 'villa',
+    coordinates: { lat: 0.6933, lng: 30.2753 },
     amenities: ['Pool', 'WiFi', 'Kitchen', 'Parking', 'Mountain View'],
     images: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -153,6 +161,7 @@ export const sampleProperties = [
     maxGuests: 4,
     size: '120 sqm',
     type: 'house',
+    coordinates: { lat: 0.6933, lng: 30.2753 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Garden'],
     images: [
       'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -172,6 +181,7 @@ export const sampleProperties = [
     maxGuests: 6,
     size: '200 sqm',
     type: 'house',
+    coordinates: { lat: -0.6167, lng: 30.6500 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Garden', 'Ranch Access'],
     images: [
       'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -189,6 +199,7 @@ export const sampleProperties = [
     maxGuests: 4,
     size: '90 sqm',
     type: 'apartment',
+    coordinates: { lat: -0.6167, lng: 30.6500 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Security'],
     images: [
       'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -201,13 +212,14 @@ export const sampleProperties = [
     id: '12',
     title: 'Northern Comfort Villa',
     location: 'Gulu',
-    description: 'Comfortable villa in a peaceful neighborhood',
-    price: 450000,
+    description: 'Comfortable villa in the northern region',
+    price: 400000,
     bedrooms: 3,
     bathrooms: 2,
     maxGuests: 6,
     size: '180 sqm',
     type: 'villa',
+    coordinates: { lat: 2.7746, lng: 32.2980 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Garden'],
     images: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -216,19 +228,20 @@ export const sampleProperties = [
   },
   {
     id: '13',
-    title: 'City View Apartment',
+    title: 'Peaceful Apartment',
     location: 'Gulu',
-    description: 'Modern apartment with city views',
+    description: 'Peaceful apartment in a quiet neighborhood',
     price: 250000,
     bedrooms: 2,
     bathrooms: 1,
     maxGuests: 4,
-    size: '80 sqm',
+    size: '100 sqm',
     type: 'apartment',
+    coordinates: { lat: 2.7746, lng: 32.2980 },
     amenities: ['WiFi', 'Kitchen', 'Parking'],
     images: [
-      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
     ]
   },
 
@@ -237,13 +250,14 @@ export const sampleProperties = [
     id: '14',
     title: 'West Nile Villa',
     location: 'Arua',
-    description: 'Beautiful villa in the heart of West Nile',
-    price: 400000,
+    description: 'Beautiful villa in the West Nile region',
+    price: 350000,
     bedrooms: 3,
     bathrooms: 2,
     maxGuests: 6,
-    size: '160 sqm',
+    size: '200 sqm',
     type: 'villa',
+    coordinates: { lat: 3.0201, lng: 30.9111 },
     amenities: ['WiFi', 'Kitchen', 'Parking', 'Garden'],
     images: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -252,19 +266,20 @@ export const sampleProperties = [
   },
   {
     id: '15',
-    title: 'Border Town Apartment',
+    title: 'Border Town House',
     location: 'Arua',
-    description: 'Convenient apartment near the border',
+    description: 'Comfortable house near the border',
     price: 200000,
     bedrooms: 2,
     bathrooms: 1,
     maxGuests: 4,
-    size: '70 sqm',
-    type: 'apartment',
+    size: '120 sqm',
+    type: 'house',
+    coordinates: { lat: 3.0201, lng: 30.9111 },
     amenities: ['WiFi', 'Kitchen', 'Parking'],
     images: [
-      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
     ]
   }
 ]; 
