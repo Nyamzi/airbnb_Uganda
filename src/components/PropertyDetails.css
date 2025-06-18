@@ -1,0 +1,554 @@
+.property-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button:hover {
+  color: #ff385c;
+}
+
+.property-header {
+  margin-bottom: 20px;
+}
+
+.property-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.location {
+  font-size: 18px;
+  color: #666;
+}
+
+.image-gallery {
+  margin-bottom: 30px;
+}
+
+.main-image-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background: white;
+}
+
+.nav-button.prev {
+  left: 20px;
+}
+
+.nav-button.next {
+  right: 20px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 0.9;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border: 2px solid #ff385c;
+}
+
+.property-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #666;
+  position: relative;
+}
+
+.tab-button.active {
+  color: #ff385c;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff385c;
+}
+
+.property-content {
+  margin-bottom: 30px;
+}
+
+.property-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info-item h3 {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 24px;
+  color: #222;
+  font-weight: 600;
+}
+
+.description-section {
+  margin-bottom: 30px;
+}
+
+.description-section h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.amenities-section {
+  margin-bottom: 30px;
+}
+
+.amenities-section h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.amenity-item span {
+  color: #ff385c;
+  font-weight: bold;
+}
+
+/* Host Section Styles */
+.host-section {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.host-profile {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.host-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff385c;
+}
+
+.host-info {
+  flex: 1;
+}
+
+.host-info h2 {
+  margin-bottom: 10px;
+  color: #222;
+  font-size: 24px;
+}
+
+.host-info h3 {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 20px;
+}
+
+.host-stats {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff385c;
+}
+
+.stat p {
+  color: #666;
+  margin-top: 5px;
+}
+
+.host-status {
+  color: #ff385c;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.host-details {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.response-time,
+.languages,
+.verified {
+  margin: 10px 0;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.response-time span,
+.languages span {
+  color: #666;
+  font-weight: 600;
+}
+
+.verified {
+  color: #00a699;
+}
+
+.verified span {
+  color: #00a699;
+  font-weight: bold;
+}
+
+.host-description {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #444;
+  font-size: 16px;
+}
+
+/* Location Section Styles */
+.location-section {
+  padding: 20px;
+}
+
+.map-placeholder {
+  height: 300px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.location-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.location-details h3 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.location-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.location-details li {
+  margin-bottom: 10px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.location-details li::before {
+  content: '•';
+  color: #ff385c;
+}
+
+/* Booking Card Styles */
+.booking-card {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-section h2 {
+  color: #222;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.price-section p {
+  color: #666;
+}
+
+.contact-button {
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background: #e31c5f;
+}
+
+/* Loading and Error States */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #ff385c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-details-container {
+    padding: 15px;
+  }
+
+  .main-image-container {
+    height: 300px;
+  }
+
+  .host-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .host-stats {
+    justify-content: center;
+  }
+
+  .host-details {
+    text-align: left;
+  }
+
+  .response-time,
+  .languages,
+  .verified {
+    justify-content: flex-start;
+  }
+
+  .booking-card {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .property-tabs {
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .tab-button {
+    padding: 10px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image-container {
+    height: 200px;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 60px;
+  }
+
+  .property-header h1 {
+    font-size: 24px;
+  }
+}
+
+.price-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 24px;
+}
+
+.price-header {
+  margin-bottom: 20px;
+}
+
+.price-header h3 {
+  font-size: 24px;
+  color: #222222;
+  margin: 0;
+}
+
+.price-header span {
+  color: #717171;
+  font-size: 14px;
+}
+
+.price-details {
+  border-top: 1px solid #dddddd;
+  padding-top: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #222222;
+}
+
+.price-row.total {
+  border-top: 1px solid #dddddd;
+  padding-top: 12px;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #ff385c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.contact-button:hover {
+  background-color: #e31c5f;
+} 
